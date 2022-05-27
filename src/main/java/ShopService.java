@@ -22,7 +22,14 @@ public class ShopService {
 
     public void addOrder(ArrayList<String> productIds){
         ArrayList<Product> productsOfOrder = new ArrayList<>();
-        for(String id : productIds) productRepo.get(id);
+        for(String id : productIds){
+            Product product = productRepo.get(id);
+            if (product ==null) {
+                throw new RuntimeException();
+            }
+            productsOfOrder.add(product);
+        }
+
         Order newOrder = new Order(productsOfOrder);
         orderRepo.add(newOrder);
     }
