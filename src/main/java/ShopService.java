@@ -1,6 +1,8 @@
+import javax.swing.text.html.Option;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ShopService {
 
@@ -13,7 +15,7 @@ public class ShopService {
     }
 
     public Product getProduct(String id){
-        return productRepo.get(id);
+        return productRepo.get(id).get();
     }
 
     public List<Product> listProducts(){
@@ -23,11 +25,11 @@ public class ShopService {
     public void addOrder(ArrayList<String> productIds){
         ArrayList<Product> productsOfOrder = new ArrayList<>();
         for(String id : productIds){
-            Product product = productRepo.get(id);
-            if (product ==null) {
+            Optional<Product> product = productRepo.get(id);
+            if (product.isEmpty()) {
                 throw new RuntimeException();
             }
-            productsOfOrder.add(product);
+            productsOfOrder.add(product.get());
         }
 
         Order newOrder = new Order(productsOfOrder);
@@ -35,7 +37,7 @@ public class ShopService {
     }
 
     public Order getOrder(String id){
-        return orderRepo.get(id);
+        return orderRepo.get(id).get();
     }
 
     public List<Order> listOrders(){

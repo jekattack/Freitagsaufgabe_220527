@@ -1,6 +1,8 @@
+import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 public class OrderRepo {
     private HashMap<String, Order> orders = new HashMap<>();
@@ -9,17 +11,13 @@ public class OrderRepo {
         for(Order o : orders) this.orders.putIfAbsent(o.getId(), o);
     }
 
-    public Order get(String id){
-        return orders.get(id);
+    public Optional<Order> get(String id){
+        Optional<Order> orderReturn = Optional.of(orders.get(id));
+        return orderReturn;
     }
 
     public List<Order> list(){
         return new ArrayList<>(orders.values());
-        /*
-        ArrayList<Product> productArr = new ArrayList<>(products.size());
-        productArr.addAll(products.values());
-        return productArr;
-        */
     }
 
     public void add(Order newOrder){
