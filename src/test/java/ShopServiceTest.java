@@ -12,11 +12,11 @@ class ShopServiceTest {
     @Test
     void shouldReturnSpecificProductForID(){
         //Given
-        Product product1 = new Product("Television");
-        Product product2 = new Product("Refridgerator");
-        Product product3 = new Product("Chair");
-        Product product4 = new Product("Computer");
-        Product product5 = new Product("DVD");
+        Product product1 = new ProductElectronics("Television");
+        Product product2 = new ProductElectronics("Refridgerator");
+        Product product3 = new ProductFurniture("Chair");
+        Product product4 = new ProductElectronics("Computer");
+        Product product5 = new ProductElectronics("DVD");
 
         ArrayList<Product> inputProducts = new ArrayList<>();
         inputProducts.add(product1);
@@ -60,11 +60,11 @@ class ShopServiceTest {
     @Test
     void shouldReturnAllProducts(){
         //Given
-        Product product1 = new Product("Television");
-        Product product2 = new Product("Refridgerator");
-        Product product3 = new Product("Chair");
-        Product product4 = new Product("Computer");
-        Product product5 = new Product("DVD");
+        Product product1 = new ProductElectronics("Television");
+        Product product2 = new ProductElectronics("Refridgerator");
+        Product product3 = new ProductFurniture("Chair");
+        Product product4 = new ProductElectronics("Computer");
+        Product product5 = new ProductElectronics("DVD");
 
         ArrayList<Product> inputProducts = new ArrayList<>();
         inputProducts.add(product1);
@@ -106,11 +106,11 @@ class ShopServiceTest {
     @Test
     void shouldAddOrderToOrderRepo(){
         //Given
-        Product product1 = new Product("Television");
-        Product product2 = new Product("Refridgerator");
-        Product product3 = new Product("Chair");
-        Product product4 = new Product("Computer");
-        Product product5 = new Product("DVD");
+        Product product1 = new ProductElectronics("Television");
+        Product product2 = new ProductElectronics("Refridgerator");
+        Product product3 = new ProductFurniture("Chair");
+        Product product4 = new ProductElectronics("Computer");
+        Product product5 = new ProductElectronics("DVD");
 
         ArrayList<Product> inputProducts = new ArrayList<>();
         inputProducts.add(product1);
@@ -157,11 +157,11 @@ class ShopServiceTest {
     @Test
     void shouldReturnSpecificOrderForID(){
         //Given
-        Product product1 = new Product("Television");
-        Product product2 = new Product("Refridgerator");
-        Product product3 = new Product("Chair");
-        Product product4 = new Product("Computer");
-        Product product5 = new Product("DVD");
+        Product product1 = new ProductElectronics("Television");
+        Product product2 = new ProductElectronics("Refridgerator");
+        Product product3 = new ProductFurniture("Chair");
+        Product product4 = new ProductElectronics("Computer");
+        Product product5 = new ProductElectronics("DVD");
 
         ArrayList<Product> inputProducts = new ArrayList<>();
         inputProducts.add(product1);
@@ -205,11 +205,11 @@ class ShopServiceTest {
     @Test
     void shouldReturnAllOrders(){
         //Given
-        Product product1 = new Product("Television");
-        Product product2 = new Product("Refridgerator");
-        Product product3 = new Product("Chair");
-        Product product4 = new Product("Computer");
-        Product product5 = new Product("DVD");
+        Product product1 = new ProductElectronics("Television");
+        Product product2 = new ProductElectronics("Refridgerator");
+        Product product3 = new ProductFurniture("Chair");
+        Product product4 = new ProductElectronics("Computer");
+        Product product5 = new ProductElectronics("DVD");
 
         ArrayList<Product> inputProducts = new ArrayList<>();
         inputProducts.add(product1);
@@ -251,11 +251,11 @@ class ShopServiceTest {
     @Test
     void shouldThrowRuntimeException(){
         //Given
-        Product product1 = new Product("Television");
-        Product product2 = new Product("Refridgerator");
-        Product product3 = new Product("Chair");
-        Product product4 = new Product("Computer");
-        Product product5 = new Product("DVD");
+        Product product1 = new ProductElectronics("Television");
+        Product product2 = new ProductElectronics("Refridgerator");
+        Product product3 = new ProductFurniture("Chair");
+        Product product4 = new ProductElectronics("Computer");
+        Product product5 = new ProductElectronics("DVD");
 
         ArrayList<Product> inputProducts = new ArrayList<>();
         inputProducts.add(product1);
